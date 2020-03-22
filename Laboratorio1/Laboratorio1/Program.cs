@@ -8,6 +8,12 @@ namespace Laboratorio1
         string Nombre;
         string Apellido;
 
+        public Persona(string nombre, string apellido)
+        {
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+        }
+
         public int Lanzar()
         {
             int randomInt = new Random().Next(0, 3);
@@ -20,7 +26,7 @@ namespace Laboratorio1
     {
         public static void Main(string[] args)
         {
-            Persona persona = new Persona();
+            Persona persona = new Persona("Bob", "Kunga");
             Console.WriteLine(persona.Lanzar());
         }
     }
